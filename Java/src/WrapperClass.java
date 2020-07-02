@@ -1,6 +1,6 @@
 
 public class WrapperClass {
-	public static void main(String[] args) {
+ public static void main(String[] args) {
 		
 		int num=100;  
 		Integer obj=Integer.valueOf(num);  

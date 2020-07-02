@@ -9,7 +9,7 @@ public class StaticExample {
 	}
 	
 	static void multiply(){
-		System.out.println(num1*num2);
+  System.out.println(num1 * num2);
 	}
 	
 	public static void main(String[] args) {
