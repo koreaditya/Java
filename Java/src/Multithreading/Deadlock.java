@@ -12,7 +12,7 @@ public class Deadlock {
         
         Thread thread1 = new Thread() {  
             public void run() {  
-                synchronized (resourceA) {  
+                synchronized (resourceB) {  
                  System.out.println("Thread 1 using resource A");  
         
                  try { 
@@ -20,12 +20,13 @@ public class Deadlock {
                      } 
                  catch (Exception e) {}  
         
-                 synchronized (resourceB) {  
+                 synchronized (resourceA) {  
                   System.out.println("Thread 1 using resource B");  
                  }  
                }  
-                
-            }  
+                System.out.println("Complete execution of T1");
+            } 
+            
           };  
           
           Thread thread2 = new Thread() {  
@@ -42,8 +43,9 @@ public class Deadlock {
                     System.out.println("Thread 2 using resource A");  
                   }  
                 }  
+                System.out.println("Complete exececution of T2");
               }  
-            };  
+            };
             
             thread1.start();  
             thread2.start();  
