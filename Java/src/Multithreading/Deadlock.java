@@ -1,5 +1,10 @@
 package Multithreading;
 
+/*
+ * Solution to this deadlock issue is to reorder how we use the resources we can have thread 1
+ * lock resource B first and then resource A so that thread 2 cannot access the resource B since thread 1
+ * has a lock on that resource already.
+ */
 public class Deadlock {
     public static void main(String[] args) {  
         final String resourceA = "resourceA";  
