@@ -21,7 +21,8 @@ public class RetrieveData {
             ResultSet customers = getCustomers.executeQuery("select * from customer");  
             while(customers.next())  
                 System.out.println(customers.getString(1)+"  "+customers.getString(2));  
-                con.close(); 
+            con.close(); 
+            
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
